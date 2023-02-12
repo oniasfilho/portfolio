@@ -173,11 +173,41 @@ body {
 
 // TODO: use this when project's filter is implemented
 .skill-wrapper:hover {
-	// color: $green;
+	color: $green;
 }
 
 .skill-name {
 	font-size: $mediumText;
 	font-weight: bold;
-	// cursor: pointer;
+	cursor: pointer;
 }
+
+// 159px until next section
+.projects-wrapper {
+	margin-top: 159px;
+}
+
+.projects-header-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+	display: flex;
+	align-items: center;
+}
+
+.projects-header-section .grid-item:first-child {
+  justify-content: start;
+}
+
+.projects-header-section .grid-item:last-child {
+  justify-content: end;
+}
+
+.project-secion-title {
+	font-size: $largeText;
+	font-weight: bold;
+}
+
+// project-size: 540 x 400

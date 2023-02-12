@@ -1,5 +1,6 @@
 import './App.scss';
 import Introduction from './components/Introduction';
+import Projects from './components/Projects';
 import Technologies from './components/Technologies';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 			<div className="body-wrapper">
 				<Introduction />
 				<Technologies />
+				<Projects />
 			</div>
 		</div>
   );
