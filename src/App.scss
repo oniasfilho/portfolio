@@ -1,0 +1,144 @@
+$darkest : #151515;
+$green : #4EE1A0;
+$darkGrey : #242424;
+$lightGrey : #D9D9D9;
+$white : #FFFFFF;
+
+$largeText : 88px;
+$mediumText : 38px;
+$smallText : 1px;
+$regularText: 18px;
+
+$profile-image : url('../public/assets/images/onias.png');
+
+* {
+	margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+	background: $darkest;
+	color: $white;
+	font-family: "Space Grotesk Medium";
+	font-size: $regularText;
+}
+
+.general-wrapper {
+	display : flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.body-wrapper {
+	width: 1110px;
+}
+
+.introduction-wrapper {
+	display: grid;
+}
+
+.header-section {
+	display: grid;
+	height: 98px;
+	grid-template-columns: 1.3fr 445px;
+}
+
+.header-left-column {
+	display: flex;
+	align-items: center;
+}
+
+.logo-section {
+	font-size: $mediumText;
+	font-weight: bold;
+	letter-spacing: -1.5px;
+}
+
+.header-right-column {
+	// background: blueviolet;
+}
+
+.socials-header-wrapper {
+	display: grid;
+	padding-left: 50%;
+	padding-right: 30px;
+	height: 78px;
+	background: $darkGrey;
+}
+
+.socials-header-section {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 30px;
+}
+
+.introduction-content-section {
+	display: grid;
+	grid-template-columns: 1.3fr 445px;
+	margin-top: 140px;
+	height: 60vh;
+}
+
+.introduction-left-column {
+	// background: brown;
+}
+
+.greeting-text {
+	font-weight: bold;
+	font-size: $largeText;
+	line-height: 88px;
+	letter-spacing: -2.5px;
+	margin-bottom: 40px;
+	overflow: visible;
+}
+
+.greeting-paragraph {
+	// background-color: red;
+  // width: 600px;
+  // height: 600px;
+	width: 110%;
+	z-index: 9999;
+	position: relative;
+	
+}
+
+.description-text {
+	font-size: $regularText;
+	line-height: 28px;
+	margin-bottom: 80px;
+}
+
+.introduction-right-column {
+	margin-top: 160px;
+	background: $darkGrey;
+	height: 397px;
+}
+
+.my-picture-section {
+	background-image: $profile-image;
+  height: 397px;
+  width: 100%px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.underlined-portion {
+	border-bottom: 6px solid $green;
+  padding-bottom: 4px;
+}
+
+.underlined-portion-sm {
+	border-bottom: 2px solid $green;
+  padding-bottom: 4px;
+}
+
+.contact-me-button {
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
