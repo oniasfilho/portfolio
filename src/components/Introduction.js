@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import SectionDivider from './SectionDivider';
 
 const Introduction = () => {
 	return (
@@ -39,13 +40,14 @@ const Introduction = () => {
 						building accessible web apps that users love.
 					</div>
 					<div className='contact-me-button'>
-						<span className='underlined-portion-sm'>contact-me</span>
+						<span className='underlined-portion-sm'>contact me</span>
 					</div>
 				</div>
 				<div className='introduction-right-column'>
 					<div className='my-picture-section'></div>
 				</div>
 			</div>
+			<SectionDivider/>
 		</div>
 	);
 }
