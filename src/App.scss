@@ -6,10 +6,17 @@ $white : #FFFFFF;
 
 $largeText : 88px;
 $mediumText : 38px;
-$smallText : 1px;
+$smallText : 24px;
 $regularText: 18px;
 
 $profile-image : url('../public/assets/images/onias.png');
+$project-image-1 : url('../public/assets/images/pj-1.webp');
+$project-image-2 : url('../public/assets/images/pj-2.webp');
+$project-image-3 : url('../public/assets/images/pj-3.webp');
+$project-image-4 : url('../public/assets/images/pj-4.webp');
+$project-image-5 : url('../public/assets/images/pj-5.webp');
+$project-image-6 : url('../public/assets/images/pj-6.webp');
+
 
 * {
 	margin: 0;
@@ -183,7 +190,7 @@ body {
 }
 
 // 159px until next section
-.projects-wrapper {
+.projects-section-wrapper {
 	margin-top: 159px;
 }
 
@@ -205,9 +212,70 @@ body {
   justify-content: end;
 }
 
-.project-secion-title {
+.project-section-title {
 	font-size: $largeText;
 	font-weight: bold;
 }
 
-// project-size: 540 x 400
+.projects-content-section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 30px;
+	margin-top: 75px;
+}
+
+.single-project-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+.project-image-section {
+	width: 540px;
+	height: 400px;
+	background: rgb(161, 113, 121);
+}
+
+// .project-image-section.project-1 {
+// 	background-image: $project-image-1;
+// }
+
+.project-title {
+	font-size: $smallText;
+}
+
+@mixin project-image($image) {
+  background-image: $image;
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.project-technologies-tags {
+	font-size: $regularText
+}
+
+.project-1 {
+  @include project-image($project-image-1);
+}
+
+.project-2 {
+  @include project-image($project-image-2);
+}
+
+.project-3 {
+  @include project-image($project-image-3);
+}
+
+.project-4 {
+  @include project-image($project-image-4);
+}
+
+.project-5 {
+  @include project-image($project-image-5);
+}
+
+.project-6 {
+  @include project-image($project-image-6);
+}

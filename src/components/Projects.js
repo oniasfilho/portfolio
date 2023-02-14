@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import projects from './auxFiles/projects';
 
 const Projects = () => {
 	return (
-		<div className='projects-wrapper'>
+		<div className='projects-section-wrapper'>
 			<div className='projects-header-section'>
 				<div className='grid-item'>
-					<p className='project-secion-title'>Projects</p>
+					<p className='project-section-title'>Projects</p>
 				</div>
 				<div className='grid-item'>
 					<div className='contact-me-button'>
@@ -13,38 +14,25 @@ const Projects = () => {
 					</div>
 				</div>
 			</div>
-			<div className='single-project-wrapper'>
-				<div className='project-image-section'>Project Photo</div>
-				<p className='project-title'>E-Learning Landing Page</p>
-				<div className='project-technologies-tags'>HTML CSS</div>
-			</div>
-			<div className='single-project-wrapper'>
-				<div className='project-image-section'>Project Photo</div>
-				<p className='project-title'>E-Learning Landing Page</p>
-				<div className='project-technologies-tags'>HTML CSS</div>
-			</div>
-			<div className='single-project-wrapper'>
-				<div className='project-image-section'>Project Photo</div>
-				<p className='project-title'>E-Learning Landing Page</p>
-				<div className='project-technologies-tags'>HTML CSS</div>
-			</div>
-			<div className='single-project-wrapper'>
-				<div className='project-image-section'>Project Photo</div>
-				<p className='project-title'>E-Learning Landing Page</p>
-				<div className='project-technologies-tags'>HTML CSS</div>
-			</div>
-			<div className='single-project-wrapper'>
-				<div className='project-image-section'>Project Photo</div>
-				<p className='project-title'>E-Learning Landing Page</p>
-				<div className='project-technologies-tags'>HTML CSS</div>
-			</div>
-			<div className='single-project-wrapper'>
-				<div className='project-image-section'>Project Photo</div>
-				<p className='project-title'>E-Learning Landing Page</p>
-				<div className='project-technologies-tags'>HTML CSS</div>
+			<div className='projects-content-section'>
+				{projects.map((each, id) => {
+					return (
+						<div className='single-project-wrapper' key={id}>
+							<div
+								className={`project-image-section project-1 ${each.className}`}
+							></div>
+							<p className='project-title'>{each.projectTitle}</p>
+							<div className={`project-technologies-tags`}>
+								{each.tags.map((tag, tagId) => {
+									return <span key={tagId}>{`${tag} `}</span>;
+								})}
+							</div>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);
-}
+};
 
-export default Projects
+export default Projects;
