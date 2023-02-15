@@ -34,6 +34,12 @@ const Projects = () => {
 									return <span key={tagId}>{`${tag} `}</span>;
 								})}
 							</div>
+							<div className="project-overlay-mobile">
+								<div className="project-links-mobile">
+									<p className='overlay-links'>View Project</p>
+									<a className='overlay-links'>View Code</a>
+								</div>
+							</div>
 						</div>
 					);
 				})}

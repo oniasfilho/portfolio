@@ -10,7 +10,7 @@ function App() {
 			<div className="body-wrapper">
 				<Introduction />
 				<Technologies />
-				{/* <Projects /> */}
+				<Projects />
 				{/* <Contact /> */}
 			</div>
 		</div>
