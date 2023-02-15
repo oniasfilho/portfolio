@@ -5,16 +5,16 @@ import Projects from './components/Projects';
 import Technologies from './components/Technologies';
 
 function App() {
-  return (
-    <div className="general-wrapper">
+	return (
+		<div className="general-wrapper">
 			<div className="body-wrapper">
 				<Introduction />
 				<Technologies />
-				<Projects />
-				<Contact />
+				{/* <Projects /> */}
+				{/* <Contact /> */}
 			</div>
 		</div>
-  );
+	);
 }
 
 export default App;
