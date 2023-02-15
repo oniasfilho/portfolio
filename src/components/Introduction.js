@@ -36,8 +36,7 @@ const Introduction = () => {
 						</p>
 					</div>
 					<div className='description-text'>
-						Based in Brazil, I'm a full-stack developer passionate about
-						building accessible web apps that users love.
+						I specialize in building accessible and user-friendly web applications that deliver real value to my clients.
 					</div>
 					<div className='contact-me-button'>
 						<span className='underlined-portion-sm'>contact me</span>
@@ -47,7 +46,7 @@ const Introduction = () => {
 					<div className='my-picture-section'></div>
 				</div>
 			</div>
-			<SectionDivider/>
+			<SectionDivider />
 		</div>
 	);
 }

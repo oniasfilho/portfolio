@@ -35,17 +35,27 @@ body {
 }
 
 .general-wrapper {
-	display : flex;
+	display: grid;
 	align-items: center;
 	justify-content: center;
+	// display : flex;
+	// align-items: center;
+	// justify-content: center;
 } 
 
 .body-wrapper {
-	width: 1110px;
+	display: grid;
+  // grid-template-columns: 1110px;
+}
+
+.body-wrapper > :nth-child(4) {
+  grid-column: 1 / -1;
 }
 
 .introduction-wrapper {
 	display: grid;
+	grid-template-columns: 1110px;
+	justify-content: center;
 }
 
 .header-section {
@@ -116,6 +126,8 @@ body {
 	font-size: $regularText;
 	line-height: 28px;
 	margin-bottom: 80px;
+	text-align: justify;
+	margin-right: 30px;
 }
 
 .introduction-right-column {
@@ -167,6 +179,8 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 30px;
 	height: 35vh;
+	max-width: 1110px;
+	justify-self: center;
 	// background: red;
 }
 
@@ -192,6 +206,8 @@ body {
 // 159px until next section
 .projects-section-wrapper {
 	margin-top: 159px;
+	max-width: 1110px;
+	justify-self: center;
 }
 
 .projects-header-section {
@@ -280,12 +296,23 @@ body {
   @include project-image($project-image-6);
 }
 
+.body-wrapper .contact-wrapper {
+	max-width: unset;
+}
+
 .contact-wrapper {
+	margin-top: 100px;
+	background: $darkGrey;
+	min-width: 99vw;
+}
+
+.inner-contact-wrapper {
+	margin:0 auto;
+	max-width: 1110px;
 	margin-top: 50px;
 	padding-top: 50px;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
-	background: $darkGrey;
 }
 
 .contact-upper-section {
@@ -300,6 +327,7 @@ body {
 
 .contact-message {
 	text-align: justify;
+	margin-right: 70px;
 }
 
 .contact-lower-section {
@@ -359,4 +387,21 @@ body {
 	flex-direction: row-reverse;
 	margin-right: 100px;
 	// background: red;
+}
+
+.full-width-row {
+  grid-column: 1 / -1;
+}
+
+.contact-lower-section {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+	border-top: $lightGrey 2px solid;
+}
+
+.footer-socials {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 30px;
 }
