@@ -18,6 +18,12 @@ const Contact = () => {
 			...prevForm,
 			[name]: value
 		}));
+
+		if (invalidFields.includes(name)) {
+			if ((name === 'email' && /\S+@\S+\.\S+/.test(value)) || (value.trim().length > 0 && name !== 'email')) {
+				setInvalidFields(invalidFields.filter((field) => field !== name));
+			}
+		}
 	}
 
 	const handleSendMessage = () => {

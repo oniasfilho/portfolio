@@ -616,6 +616,66 @@ body {
 		gap: 30px;
 	}
 
+	.inner-contact-wrapper {
+		margin:0 auto;
+		max-width: 1110px;
+		margin-top: 50px;
+		padding-top: 50px;
+		display: grid;
+		grid-template-rows: auto auto;
+	}
+
+	.contact-upper-section {
+		all: unset;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.contact-left-column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contact-message {
+		padding: 170px;
+		margin-right: 0px;
+		text-align: center;
+	}
+
+	.form-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding-right: 0px;
+	}
+
+	.submit-button-wrapper {
+		all:unset;
+	}
+
+	.message-me-button {
+		display: flex;
+		font-size: $regularText;
+		cursor: pointer;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		justify-content: center;
+		// background: red;
+	}
+
+	.contact-lower-section {
+		height: 100px;
+	}
+
+	.footer-socials {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 30px;
+		margin-right: 40px;
+	}
+
 
 
 }
